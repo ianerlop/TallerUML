@@ -8,37 +8,48 @@ public class Camion extends VehiculoCarga{
 	private int numeroRuedas;
 	private double capacidadRemolque;
 	private String licencia;
+	private Remolque[] remolques;
 
 	public Camion(String numRegistro, double capacidadMotor, Date proxFechaPrueba, double pesoCargado,
-			Fabricante fabricante, Permanente asignado, int numeroRuedas, double capacidadRemolque, String licencia) {
+			Fabricante fabricante, Permanente asignado, int numeroRuedas, double capacidadRemolque, String licencia,
+			Remolque[] remolques) {
 		super(numRegistro, capacidadMotor, proxFechaPrueba, pesoCargado, fabricante, asignado);
 		this.numeroRuedas = numeroRuedas;
 		this.capacidadRemolque = capacidadRemolque;
 		this.licencia = licencia;
+		this.remolques = remolques;
 	}
 
-	public int getnumeroRuedas() {
+	public int getNumeroRuedas() {
 		return numeroRuedas;
 	}
-	
-	public double getcapacidadRemolque() {
+
+	public void setNumeroRuedas(int numeroRuedas) {
+		this.numeroRuedas = numeroRuedas;
+	}
+
+	public double getCapacidadRemolque() {
 		return capacidadRemolque;
 	}
-	
-	public String getlicencia() {
+
+	public void setCapacidadRemolque(double capacidadRemolque) {
+		this.capacidadRemolque = capacidadRemolque;
+	}
+
+	public String getLicencia() {
 		return licencia;
 	}
 
-	public void setnumeroRuedas(int numeroRuedas) {
-		this.numeroRuedas = numeroRuedas;
+	public void setLicencia(String licencia) {
+		this.licencia = licencia;
+	}
+
+	public Remolque[] getRemolques() {
+		return remolques;
+	}
+
+	public void setRemolques(Remolque[] remolques) {
+		this.remolques = remolques;
 	}
 	
-	public void setcapacidadRemolque(double capacidadRemolque) {
-		this.capacidadRemolque=capacidadRemolque;
-	}
-	
-	public void setlicencia(String licencia) {
-		this.licencia=licencia;
-	}
-		
 }
